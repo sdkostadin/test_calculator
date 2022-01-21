@@ -9,7 +9,7 @@ int main(int argc, char* argv[])
 	{
 		for (int i = 3; i < argc; i++)
 		{
-			sum += atoi(argv[i]);
+			sum += atoi(argv[i]); //asdsadsad
 
 		}
 		std::cout << sum << std::endl;

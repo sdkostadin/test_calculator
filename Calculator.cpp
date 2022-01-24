@@ -38,4 +38,24 @@ int main(int argc, char* argv[])
 			std::cout << "Cannot divide to 0";
 		}
 	}
+	else if (strcmp(argv[2],"power")==0)
+	{
+		if(atoi(argv[4])==0)
+		{
+			std::cout<<1;
+		}
+		else 
+		{
+			int temp=atoi(argv[3]);
+			int res=1;
+			int size = atoi(argv[4]);
+			for (int i = 0; i < size; i++)
+			{
+				res= res* temp;
+				
+			}
+		std::cout<<res;
+		}
+	}
+	return 0;
 }

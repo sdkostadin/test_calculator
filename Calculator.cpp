@@ -1,9 +1,15 @@
 #include <iostream>
+#include <cstring>
+
+#include "foo.h"
 
 int main(int argc, char* argv[])
 {
 	int sum = 0;
 	int multiply = 1;
+
+	foo(); 
+
 	if (strcmp(argv[2], "sum") == 0)
 	{
 		for (int i = 3; i < argc; i++)
@@ -38,4 +44,5 @@ int main(int argc, char* argv[])
 		}
 		////sdasdasd
 	}
+
 }

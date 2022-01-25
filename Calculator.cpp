@@ -38,6 +38,9 @@ int main(int argc, char* argv[])
 		{
 			std::cout << "Cannot divide to 0";
 		}
+
+		////sdasdasd
+
 	}
 	else if (strcmp(argv[2],"power")==0)
 	{

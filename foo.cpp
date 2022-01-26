@@ -4,7 +4,13 @@
 
 using namespace std;
 
-void foo()
+void foo(int argc,char* argv[])
 {
-    cout <<"Gotcha!"<<endl;
+    int sum=0;
+    for (int i = 3; i < argc; i++)
+		{
+			sum += atoi(argv[i]); //asdsadsad
+
+		}
+		std::cout << sum << std::endl;
 }

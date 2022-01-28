@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 #include "Minus.h"
 
 void Minus(char* argv[])

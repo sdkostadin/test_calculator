@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 #include "Divide.hpp"
 
 void Divide(char* argv[])

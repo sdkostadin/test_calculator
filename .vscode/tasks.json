@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe build file",
-			"command": "C:\\StPerl530_x64\\c\\bin\\g++.exe",
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
 			"args": [
 				"-g",
 				"${fileDirname}\\*.cpp",
@@ -21,28 +21,48 @@
 				"kind": "build",
 				"isDefault": true
 			},
-			"detail": "compiler: C:\\StPerl530_x64\\c\\bin\\g++.exe"
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"dependsOn":["UnitTest"]
 		},
 		{
 			"type": "cppbuild",
-			"label": "C/C++: cl.exe build active file",
-			"command": "cl.exe",
+			"label": "UnitTest",
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
 			"args": [
-				"/Zi",
-				"/EHsc",
-				"/nologo",
-				"/Fe:",
-				"${fileDirname}\\${fileBasenameNoExtension}.exe",
-				"${file}"
+				"-g",
+				"UT/CalculatorUTest.cpp",
+				"Power.cpp",
+				"-o",
+				"UT/CalculatorUTest.exe"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
 			},
 			"problemMatcher": [
-				"$msCompile"
+				"$gcc"
 			],
 			"group": "build",
-			"detail": "compiler: cl.exe"
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "UnitTestRunBuild",
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"CalculatorUTest.cpp",
+				"../Power.cpp",
+				"-o",
+				"CalculatorUTest.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe"
 		}
 	]
 }

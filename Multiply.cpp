@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 #include "Multiply.h"
 
 void Multiply(int argc,char* argv[])

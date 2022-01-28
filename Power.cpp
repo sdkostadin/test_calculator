@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include <stdlib.h>
 #include "Power.hpp"
 
 int Power(char* argv[])
@@ -18,7 +18,7 @@ int Power(char* argv[])
         {
             res= res* temp;
         }
-        std::cout<<res;
+        std::cout<<res << "\n";
     }
     // left for unit testing
     return res;

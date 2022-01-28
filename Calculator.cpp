@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
 	{
 		Minus(argv);
 	}
-	else if (0 == (strcmp(argv[2], "divide"))))
+	else if (0 == (strcmp(argv[2], "divide")))
 	{
 		Divide(argv);
 	}

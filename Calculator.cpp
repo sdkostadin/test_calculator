@@ -3,6 +3,8 @@
 #include "foo.h"
 #include "Minus.h"
 #include "Multiply.h"
+#include "Divide.hpp"
+#include "Power.hpp"
 
 int main(int argc, char* argv[])
 {
@@ -18,35 +20,14 @@ int main(int argc, char* argv[])
 	{
 		Minus(argv);
 	}
-	else if (strcmp(argv[2], "divide") == 0)
+	else if (0 == (strcmp(argv[2], "divide"))))
 	{
-		if (atoi(argv[4]) == 0)
-		{
-			std::cout << "Cannot divide to 0";
-		}
-		else
-		{
-			std::cout << atoi(argv[3]) / atoi(argv[4]) << std::endl;
-		}
-		////sdasdasd
+		Divide(argv);
 	}
-	else if (strcmp(argv[2],"power")==0)
+	else if (0 == (strcmp(argv[2],"power")))
 	{
-		if(atoi(argv[4])==0)
-		{
-			std::cout<<1;
-		}
-		else 
-		{
-			int temp=atoi(argv[3]);
-			int res=1;
-			int size = atoi(argv[4]);
-			for (int i = 0; i < size; i++)
-			{
-				res= res* temp;
-			}
-		std::cout<<res;
-		}
+		// intentionaly left with return parameter
+		(void) Power(argv);
 	}
 
 	return 0;

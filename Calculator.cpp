@@ -1,5 +1,10 @@
 #include <iostream>
 #include <cstring>
+#include <string>
+#include <stdio.h> // shi
+//#include <cstdlib> // ti
+// #include <stdlib.h> // veche nz
+#include "GlobalDefs.hpp"
 #include "foo.h"
 #include "Minus.h"
 #include "Multiply.h"
@@ -8,28 +13,50 @@
 
 int main(int argc, char* argv[])
 {
-	if (strcmp(argv[2], "sum") == 0)
+	int res = 0;
+	// CalculationParams *calculationParams = {0, stoi(argv[3]), stoi(argv[4]), std::string(argv[2])};
+	//CalculationParams *calculationParams = {0, atoi(argv[3]), atoi(argv[4]), std::string(argv[2])};
+    CalculationParams *calculationParams;
+	calculationParams->errorFlag = false;
+	calculationParams->firstNumber = atoi(argv[3]);
+	calculationParams->secondNumber = atoi(argv[4]);
+	calculationParams->operation = std::string(argv[2]);
+
+	if (ZERO == (strcmp(argv[2], "sum")))
 	{
 		foo(argc,argv);
 	}
-	else if (strcmp(argv[2], "multiply") == 0)
+	else if (ZERO == (calculationParams->operation.compare(MULTIPLY)))
 	{
 		Multiply(argc,argv);
 	}
-	else if (strcmp(argv[2], "minus") == 0)
+	else if (ZERO == (calculationParams->operation.compare(MINUS)))
 	{
 		Minus(argv);
 	}
-	else if (0 == (strcmp(argv[2], "divide")))
+	else if (ZERO == (calculationParams->operation.compare(DIVIDE)))
 	{
 		Divide(argv);
 	}
-	else if (0 == (strcmp(argv[2],"power")))
+	else if (ZERO == (calculationParams->operation.compare(POWER)))
 	{
 		// intentionaly left with return parameter
-		(void) Power(argv);
+		res = Power(calculationParams);
+	}
+	else
+	{
+		// MISRA x.x
+		calculationParams->operation.compare(POWER);
 	}
 
+	if(false == calculationParams->errorFlag)
+	{
+		std::cout << res << "\n";
+	}
+	else
+	{
+		std::cout << "Error has occured, please contact customer support with input parameters";
+	}
 	return 0;
 
 }

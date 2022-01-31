@@ -3,7 +3,7 @@
 	"tasks": [
 		{
 			"type": "cppbuild",
-			"label": "C/C++: g++.exe build file",
+			"label": "ALL - C/C++: g++.exe build file",
 			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
 			"args": [
 				"-g",
@@ -22,7 +22,9 @@
 				"isDefault": true
 			},
 			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
-			"dependsOn":["UnitTest"]
+			"dependsOn": [
+				"UnitTest"
+			]
 		},
 		{
 			"type": "cppbuild",

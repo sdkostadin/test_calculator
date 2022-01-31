@@ -11,7 +11,7 @@
                 "_UNICODE"
             ],
             "windowsSdkVersion": "8.1",
-            "compilerPath": "C:\\Program Files (x86)\\Microsoft Visual Studio 14.0\\\\VC/bin/cl.exe",
+            "compilerPath": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
             "cStandard": "gnu17",
             "cppStandard": "gnu++20",
             "intelliSenseMode": "windows-msvc-x64"

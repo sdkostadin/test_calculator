@@ -2,13 +2,13 @@
 #include <stdlib.h>
 #include "Power.hpp"
 
-int Power(char* argv[])
+int Power(CalculationParams *params)
 {
-    int temp=atoi(argv[3]);
-    int res=1;
-    int size = atoi(argv[4]);
+    int res  = 1;
+    int temp = params->firstNumber;
+    int size = params->secondNumber; 
 
-    if(0 == atoi(argv[4]))
+    if(0 == size)
     {
         std::cout<<1;
     }
@@ -16,9 +16,8 @@ int Power(char* argv[])
     {
         for (int i = 0; i < size; i++)
         {
-            res= res* temp;
+            res = res * temp;
         }
-        std::cout<<res << "\n";
     }
     // left for unit testing
     return res;

@@ -3,44 +3,45 @@
 #include "foo.h"
 #include "Minus.h"
 #include "Multiply.h"
+const int INDEX_OF_OPERATION_STRING=2;
 
 int main(int argc, char* argv[])
 {
-	if (strcmp(argv[2], "sum") == 0)
+	if (0==strcmp(argv[INDEX_OF_OPERATION_STRING], "sum"))
 	{
 		foo(argc,argv);
 	}
-	else if (strcmp(argv[2], "multiply") == 0)
+	else if (0==strcmp(argv[INDEX_OF_OPERATION_STRING], "multiply"))
 	{
 		Multiply(argc,argv);
 	}
-	else if (strcmp(argv[2], "minus") == 0)
+	else if (0==strcmp(argv[INDEX_OF_OPERATION_STRING], "minus"))
 	{
 		Minus(argv);
 	}
-	else if (strcmp(argv[2], "divide") == 0)
+	else if (0==strcmp(argv[INDEX_OF_OPERATION_STRING], "divide"))
 	{
-		if (atoi(argv[4]) == 0)
+		if (0==atoi(argv[INDEX_OF_SECOND_ELEMENT]))
 		{
 			std::cout << "Cannot divide to 0";
 		}
 		else
 		{
-			std::cout << atoi(argv[3]) / atoi(argv[4]) << std::endl;
+			std::cout << atoi(argv[INDEX_OF_FIRST_ELEMENT]) / atoi(argv[INDEX_OF_SECOND_ELEMENT]) << std::endl;
 		}
 		////sdasdasd
 	}
-	else if (strcmp(argv[2],"power")==0)
+	else if (0==strcmp(argv[INDEX_OF_OPERATION_STRING],"power"))
 	{
-		if(atoi(argv[4])==0)
+		if(0==atoi(argv[INDEX_OF_SECOND_ELEMENT]))
 		{
 			std::cout<<1;
 		}
 		else 
 		{
-			int temp=atoi(argv[3]);
-			int res=1;
-			int size = atoi(argv[4]);
+			int temp=atoi(argv[INDEX_OF_FIRST_ELEMENT]);
+			int res=MULTIPLYING_START_VALUE;
+			int size = atoi(argv[INDEX_OF_SECOND_ELEMENT]);
 			for (int i = 0; i < size; i++)
 			{
 				res= res* temp;

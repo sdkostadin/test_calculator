@@ -1,9 +1,9 @@
 #include <iostream>
 #include <cstring>
 #include <string>
-#include <stdio.h> // shi
-//#include <cstdlib> // ti
-// #include <stdlib.h> // veche nz
+#include <stdio.h> 
+#include <cstdlib> 
+#include <stdlib.h> 
 #include "GlobalDefs.hpp"
 #include "foo.h"
 #include "Minus.h"
@@ -40,13 +40,11 @@ int main(int argc, char* argv[])
 	}
 	else if (ZERO == (calculationParams->operation.compare(POWER)))
 	{
-		// intentionaly left with return parameter
 		res = Power(calculationParams);
 	}
 	else
 	{
-		// MISRA x.x
-		calculationParams->operation.compare(POWER);
+		calculationParams->errorFlag = true;
 	}
 
 	if(false == calculationParams->errorFlag)
@@ -57,6 +55,6 @@ int main(int argc, char* argv[])
 	{
 		std::cout << "Error has occured, please contact customer support with input parameters";
 	}
-	return 0;
 
+	return 0;
 }

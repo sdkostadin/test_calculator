@@ -14,14 +14,11 @@
 int main(int argc, char* argv[])
 {
 	int resultOfCalculation = 0;
-	// CalculationParams *calculationParams = {0, stoi(argv[3]), stoi(argv[4]), std::string(argv[2])};
-	// CalculationParams *calculationParams = {0, atoi(argv[3]), atoi(argv[4]), std::string(argv[2])};
+	
     CalculationParams *calculationParams = new CalculationParams(false, atoi(argv[3]), atoi(argv[4]), std::string(argv[2]));
-	/*calculationParams->errorFlag = false;
-	calculationParams->firstNumber = atoi(argv[3]);
-	calculationParams->secondNumber = atoi(argv[4]);
-	calculationParams->operation = std::string(argv[2]);*/
 
+
+    // TODO: not cool to use functions inside if... think of something better
 	if (ZERO == (strcmp(argv[2], "sum")))
 	{
 		Sum(argc,argv);

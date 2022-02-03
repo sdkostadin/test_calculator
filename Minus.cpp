@@ -1,8 +1,11 @@
 #include <iostream>
 #include <stdlib.h>
-#include "Minus.h"
+#include "Minus.hpp"
 
-void Minus(char* argv[])
+int Minus(CalculationParams *params)
 {
-    std::cout << atoi(argv[3]) - atoi(argv[4]) << std::endl;
+    // could be one line but this is better for debugging
+    int retVal = 0;
+    retVal = params->firstNumber - params->secondNumber;
+    return retVal;
 }

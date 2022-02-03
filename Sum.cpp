@@ -1,10 +1,10 @@
 #include <iostream>
 #include <stdlib.h>
-#include "foo.h"
+#include "Sum.hpp"
 
 using namespace std;
 
-void foo(int argc,char* argv[])
+void Sum(int argc,char* argv[])
 {
     int sum=0;
     for (int i = 3; i < argc; i++)

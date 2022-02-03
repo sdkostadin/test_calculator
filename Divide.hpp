@@ -1,6 +1,7 @@
 #ifndef _DIVIDE_H
 #define _DIVIDE_H
+#include "GlobalDefs.hpp"
 
-void Divide(char* argv[]);
+int Divide(CalculationParams *params);
 
 #endif

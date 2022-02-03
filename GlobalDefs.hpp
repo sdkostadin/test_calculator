@@ -11,12 +11,15 @@ static const std::string POWER    = "power";
 static const std::string DIVIDE   = "divide";
 static const std::string MULTIPLY = "multiply";
 
-typedef struct {
+struct CalculationParams{
     bool        errorFlag;
     int         firstNumber;
     int         secondNumber;
     std::string operation;
-}CalculationParams;
+
+    CalculationParams(bool errFlag, int fN, int sN, std::string op) : 
+    errorFlag(errFlag), firstNumber(fN), secondNumber(sN), operation(op){ };
+};
 
 enum{
     

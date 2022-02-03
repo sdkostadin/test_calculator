@@ -2,14 +2,18 @@
 #include <stdlib.h>
 #include "Divide.hpp"
 
-void Divide(char* argv[])
+int Divide(CalculationParams *params)
 {
-    if (0 == atoi(argv[4]))
+	int retVal = 0;
+
+    if (0 == params->secondNumber)
 	{
-		std::cout << "Cannot divide to 0";
+		params->errorFlag = true;
 	}
 	else
 	{
-		std::cout << atoi(argv[3]) / atoi(argv[4]) << std::endl;
+		retVal = params->firstNumber / params->secondNumber;
 	}
+
+	return retVal;
 }

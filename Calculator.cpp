@@ -5,26 +5,26 @@
 #include <cstdlib> 
 #include <stdlib.h> 
 #include "GlobalDefs.hpp"
-#include "foo.h"
-#include "Minus.h"
+#include "Sum.hpp"
+#include "Minus.hpp"
 #include "Multiply.h"
 #include "Divide.hpp"
 #include "Power.hpp"
 
 int main(int argc, char* argv[])
 {
-	int res = 0;
+	int resultOfCalculation = 0;
 	// CalculationParams *calculationParams = {0, stoi(argv[3]), stoi(argv[4]), std::string(argv[2])};
-	//CalculationParams *calculationParams = {0, atoi(argv[3]), atoi(argv[4]), std::string(argv[2])};
-    CalculationParams *calculationParams;
-	calculationParams->errorFlag = false;
+	// CalculationParams *calculationParams = {0, atoi(argv[3]), atoi(argv[4]), std::string(argv[2])};
+    CalculationParams *calculationParams = new CalculationParams(false, atoi(argv[3]), atoi(argv[4]), std::string(argv[2]));
+	/*calculationParams->errorFlag = false;
 	calculationParams->firstNumber = atoi(argv[3]);
 	calculationParams->secondNumber = atoi(argv[4]);
-	calculationParams->operation = std::string(argv[2]);
+	calculationParams->operation = std::string(argv[2]);*/
 
 	if (ZERO == (strcmp(argv[2], "sum")))
 	{
-		foo(argc,argv);
+		Sum(argc,argv);
 	}
 	else if (ZERO == (calculationParams->operation.compare(MULTIPLY)))
 	{
@@ -32,15 +32,15 @@ int main(int argc, char* argv[])
 	}
 	else if (ZERO == (calculationParams->operation.compare(MINUS)))
 	{
-		Minus(argv);
+		resultOfCalculation = Minus(calculationParams);
 	}
 	else if (ZERO == (calculationParams->operation.compare(DIVIDE)))
 	{
-		Divide(argv);
+		resultOfCalculation = Divide(calculationParams);
 	}
 	else if (ZERO == (calculationParams->operation.compare(POWER)))
 	{
-		res = Power(calculationParams);
+		resultOfCalculation = Power(calculationParams);
 	}
 	else
 	{
@@ -49,7 +49,7 @@ int main(int argc, char* argv[])
 
 	if(false == calculationParams->errorFlag)
 	{
-		std::cout << res << "\n";
+		std::cout << resultOfCalculation << "\n";
 	}
 	else
 	{

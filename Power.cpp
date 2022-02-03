@@ -4,13 +4,14 @@
 
 int Power(CalculationParams *params)
 {
+    // TODO: Check for out of int bound
     int res  = 1;
     int temp = params->firstNumber;
     int size = params->secondNumber; 
 
     if(0 == size)
     {
-        std::cout<<1;
+        res = 1;
     }
     else 
     {

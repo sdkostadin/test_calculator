@@ -34,6 +34,8 @@
 				"-g",
 				"UT/CalculatorUTest.cpp",
 				"Power.cpp",
+				"Divide.cpp",
+				"Minus.cpp",
 				"-o",
 				"UT/CalculatorUTest.exe"
 			],
@@ -54,6 +56,8 @@
 				"-g",
 				"CalculatorUTest.cpp",
 				"../Power.cpp",
+				"../Divide.cpp",
+				"../Minus.cpp",
 				"-o",
 				"CalculatorUTest.exe"
 			],

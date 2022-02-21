@@ -1,6 +1,8 @@
 #ifndef _MULTIPLY_H
 #define _MULTIPLY_H
+#include "UT_Struct.h"
 const int MULTIPLYING_START_VALUE=1;
-void Multiply(int argc,char* argv[]);
+int Multiply(Params* param);
+void Multiply1(int argc,char* argv[]);
 
 #endif

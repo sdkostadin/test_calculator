@@ -1,4 +1,4 @@
-{
+/*{
 	"version": "2.0.0",
 	"tasks": [
 		{
@@ -43,6 +43,81 @@
 			],
 			"group": "build",
 			"detail": "compiler: cl.exe"
+		}
+	]
+}
+*/
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "ALL - C/C++: g++.exe build file",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${workspaceFolder}\\*.cpp",
+				"-o",
+				"${workspaceFolder}\\Calculator.exe"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"dependsOn": [
+				"UnitTest"
+			]
+		},
+		{
+			"type": "cppbuild",
+			"label": "UnitTest",
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"${workspaceFolder}\\Unit_test\\Unit.cpp",
+				"${workspaceFolder}\\Sum.cpp",
+				"${workspaceFolder}\\Multiply.cpp",
+				"${workspaceFolder}\\Minus.cpp",
+				"-o",
+				"${workspaceFolder}\\Unit_test\\Unit.exe"
+			],
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe"
+		},
+		{
+			"type": "cppbuild",
+			"label": "UnitTestRunBuild",
+			"command": "C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe",
+			"args": [
+				"-g",
+				"Unit_test/Unit.cpp",
+				"Sum.cpp",
+				"Multiply.cpp",
+				"Minus.cpp",
+				"-o",
+				"Unit_test/Unit.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build",
+			"detail": "compiler: C:\\TCC\\Tools\\mingw64\\5.4.0_WIN64\\bin\\g++.exe"
 		}
 	]
 }
